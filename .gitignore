@@ -1,0 +1,19 @@
+# Raw downloads — 565 MB, and msd_summary_file.h5 alone is over GitHub's 100 MB limit.
+# Re-create with src/01_make_msd_subset.py and src/02_prepare_indian_inputs.py.
+data/raw/
+
+# The local database holds a real person's saved memories. Kept off GitHub on purpose.
+data/memorybridge.db
+data/memorybridge.db.bak
+data/photos/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Working files
+*.bak
+presentation/work2.pptx
+app/*.backup.py
+app/*-backup.py
