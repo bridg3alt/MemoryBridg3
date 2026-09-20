@@ -17,3 +17,7 @@ __pycache__/
 presentation/work2.pptx
 app/*.backup.py
 app/*-backup.py
+
+# Screen recordings and the edited demo video — hundreds of MB, not part of the project.
+video/raw/
+video/out/
