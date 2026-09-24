@@ -1,6 +1,6 @@
 # MemoryBridge
 
-A small prototype for the Altair Global Student Contest. MemoryBridge uses music as a personal cue for revisiting and preserving autobiographical memories.
+MemoryBridge uses music as a personal cue for revisiting and preserving autobiographical memories.
 
 A user enters their birth year, language and favourite genres. MemoryBridge suggests songs that plausibly belong to periods of their life. The user can then write down what a song reminds them of, and look back at those memories later by life period (for example "Childhood" or "College").
 
