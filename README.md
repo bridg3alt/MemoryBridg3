@@ -4,7 +4,7 @@ A small prototype for the Altair Global Student Contest. MemoryBridge uses music
 
 A user enters their birth year, language and favourite genres. MemoryBridge suggests songs that plausibly belong to periods of their life. The user can then write down what a song reminds them of, and look back at those memories later by life period (for example "Childhood" or "College").
 
-> **Not a medical product.** MemoryBridge does not diagnose, treat, cure or slow any condition (including dementia or Alzheimer's), and makes no claim to restore memory. It never invents memories: the user's own recorded story is the only source of truth.
+
 
 ## Pipeline
 
@@ -40,14 +40,6 @@ Million Song Dataset (MSD) + MusicBrainz
 
 Python does not replace the TurboPrep or RapidMiner steps.
 
-## Scale
-
-| | Songs | Status |
-|---|---|---|
-| **Prototype** | about 8,000 (1950–2010, spread evenly across decades) | planned, Checkpoint 2 |
-| Possible production scale | 80k–100k+ | not built, not claimed |
-
-The full 1M-song MSD has **not** been processed.
 
 ## Folder layout
 
@@ -55,8 +47,8 @@ The full 1M-song MSD has **not** been processed.
 MemoryBridge_IEDC/
 ├── README.md, progress.md, todo.md
 ├── data/
-│   ├── raw/          original downloads (never edited)
-│   ├── interim/      Python-prepared subset (input to TurboPrep)
+│   ├── raw/          
+│   ├── interim/      
 │   └── processed/    TurboPrep / RapidMiner exports
 ├── docs/             data dictionary, checklists, assumptions, demo script
 ├── src/              Python utilities (download, subset, MusicBrainz, database)
