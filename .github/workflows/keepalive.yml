@@ -1,0 +1,30 @@
+name: keepalive
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+jobs:
+  visit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - env:
+          APP_URL: ${{ vars.APP_URL }}
+        run: |
+          python - <<'PY'
+          import os
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as p:
+              page = p.chromium.launch().new_page()
+              page.goto(os.environ["APP_URL"], timeout=60000)
+              wake = page.get_by_text("get this app back up")
+              if wake.count():
+                  wake.first.click()
+              page.wait_for_timeout(30000)
+              print("visited", page.title())
+          PY
